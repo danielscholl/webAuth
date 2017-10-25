@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  webauth:
+    image: webauth
+    build:
+      context: .
+      dockerfile: webAuth\Dockerfile
+    ports:
+      - "8000:80"
+  webauth-iis:
+    image: webauth:iis
+    build:
+      context: .
+      dockerfile: dockerfile-iis
+    ports:
+      - "8001:80"
+  webauth-httpsys:
+    image: webauth:httpsys
+    environment:
+      - WEB_SERVER=httpsys
+    build:
+      context: .
+      dockerfile: dockerfile-httpsys
+    ports:
+      - "8002:80"

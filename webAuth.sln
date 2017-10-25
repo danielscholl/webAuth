@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27009.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webAuth", "webAuth\webAuth.csproj", "{B6F0A92A-65C2-46BC-B719-13A5254120A7}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DA9D0DF9-25E5-4F97-9722-0B87E8B4B2AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6F0A92A-65C2-46BC-B719-13A5254120A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F0A92A-65C2-46BC-B719-13A5254120A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6F0A92A-65C2-46BC-B719-13A5254120A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F0A92A-65C2-46BC-B719-13A5254120A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA9D0DF9-25E5-4F97-9722-0B87E8B4B2AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA9D0DF9-25E5-4F97-9722-0B87E8B4B2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA9D0DF9-25E5-4F97-9722-0B87E8B4B2AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA9D0DF9-25E5-4F97-9722-0B87E8B4B2AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6B8AE3B-4698-4F0C-BBA2-99B6A78EB668}
+	EndGlobalSection
+EndGlobal
