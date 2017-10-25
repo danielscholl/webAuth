@@ -6,15 +6,17 @@ WORKDIR /app/
 COPY webAuth .
 RUN dotnet restore; dotnet publish -c Release
 
+
+###################################################
 FROM microsoft/aspnetcore:2.0.0-nanoserver
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'Continue'; $verbosePreference='Continue';"]
 WORKDIR app
 
 # Add local user for testing authentication against local SAM database
 RUN  New-LocalUser -Name "azureuser" -Password  (ConvertTo-SecureString  "Password1!" -AsPlainText -Force); `
-  Add-LocalGroupMember -Group Administrators -Member "azureuser" ; 
+  Add-LocalGroupMember -Group Administrators -Member "azureuser" ;
 
-# Copying compiled file from middleware NET CORE builder SDK image 
+# Copying compiled file from middleware NET CORE builder SDK image
 COPY --from=nanobuild /app/bin/Release/netcoreapp2.0/publish .
 EXPOSE 80
 ENTRYPOINT ["dotnet", "webAuth.dll"]
